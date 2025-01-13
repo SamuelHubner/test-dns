@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Teste DNS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #5f6368;
+            margin-bottom: 0.5rem;
+        }
+        .status {
+            font-weight: bold;
+            color: #34a853;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Teste de DNS</h1>
+        <p>Se você está vendo esta página, significa que:</p>
+        <p>1. Seu domínio está configurado corretamente</p>
+        <p>2. O DNS da está funcionando</p>
+        <p>3. Seu servidor web está online</p>
+        <div class="status">✓ Sistema operacional!</div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const hostname = window.location.hostname;
+                document.title = `Teste DNS - ${hostname}`;
+            });
+        </script>
+    </div>
+</body>
+</html>
